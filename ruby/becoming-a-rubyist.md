@@ -12,7 +12,8 @@
     ```
 ### Omit parentheses for method calls that have no args
   - Simply drop the parentheses when we do not pass arguments
-  ``` def say_hi
+  ``` 
+      def say_hi
       puts 'hi'
       end
       
