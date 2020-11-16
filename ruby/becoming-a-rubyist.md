@@ -10,3 +10,12 @@
         
       end
     ```
+### Omit parentheses for method calls that have no args
+  - Simply drop the parentheses when we do not pass arguments
+  ``` def say_hi
+      puts 'hi'
+      end
+      
+      # Preferred by a Rubyist
+      say_hi
+   ```
