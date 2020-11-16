@@ -5,8 +5,7 @@
 
     ```
       def get_avg(num1, num_2)
-      
-    	(num_1 + num_2) / 2
+      	(num_1 + num_2) / 2
         
       end
     ```
@@ -14,7 +13,7 @@
   - Simply drop the parentheses when we do not pass arguments
   ``` 
       def say_hi
-      puts 'hi'
+        puts 'hi'
       end
       
       # Preferred by a Rubyist
