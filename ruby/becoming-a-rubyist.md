@@ -5,6 +5,9 @@
 
     `
       def get_avg(num1, num_2)
+      
     	  (num_1 + num_2) / 2
+        
       end
+      
     `
