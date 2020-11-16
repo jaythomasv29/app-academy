@@ -1,6 +1,6 @@
-#Becoming a Rubyist
+# Becoming a Rubyist
 
-**Implicit Returns**
+** Implicit Returns **
 
 
 
@@ -12,6 +12,4 @@
     	(num_1 + num_2) / 2
 
 
-    end
-
-    `
+    end`
