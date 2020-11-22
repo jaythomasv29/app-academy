@@ -3,7 +3,7 @@
 # def max_inject(*arr)
 #   arr.inject do |acc, ele|
 #     if ele > acc # if the next element is greater as we enumerate
-#       ele #
+#       ele # result of the block is always reassigned to be the new accumulator
 #     else
 #       acc
 #     end
