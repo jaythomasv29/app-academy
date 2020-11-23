@@ -1,0 +1,3 @@
+# Monkey Patching - Adding additional method to an existing class
+
+# Ruby Types are really classes: Integer,String, Array, Hash, etc...
