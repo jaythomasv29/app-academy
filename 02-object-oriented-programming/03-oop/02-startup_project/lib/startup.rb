@@ -16,9 +16,9 @@ class Startup
   end
 
   ### spec:94
-  # def (startup) # check if our startup has more funding than another
-  #   self.@funding > startup.funding # our startup has more funding than the arg startup
-  # end
+  def >(startup) # check if our startup has more funding than another
+    @funding > startup.funding # our startup has more funding than the arg startup
+  end
 
   def hire(employee_name, title)
     if self.valid_title?(title)
