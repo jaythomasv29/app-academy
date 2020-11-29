@@ -32,7 +32,7 @@ class Game
         return "Game Over"
       else
         self.switch_turn
-        puts "Player #{@current_player.mark}'s turn ended...Switch turns!"
+        # puts "Player #{@current_player.mark}'s turn ended...Switch turns!"
       end
     end
     return "The game ended in a draw!"

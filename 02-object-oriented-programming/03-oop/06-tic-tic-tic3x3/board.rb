@@ -14,7 +14,7 @@ class Board
   def empty?(position)
     row_coord = position[0] # y axis
     col_coord = position[1] # y axis
-    self[row_coord][col_coord] == "_" # if it equal to '_' => it is empty # CHECK INITIALIZED GRID
+    @grid[row_coord][col_coord] == "_" # if it equal to '_' => it is empty # CHECK INITIALIZED GRID
   end
 
   def [](position) # this returns the element at a given position
@@ -22,7 +22,7 @@ class Board
   end
 
   def []=(position, value) # this reassign an element at given position
-    self[position[0], position[1]] = value # SET THE VALUE IN THE INITALIZED GRID
+    @grid[position[0], position[1]] = value # SET THE VALUE IN THE INITALIZED GRID
   end
 
   def place_mark(position, mark)
@@ -30,7 +30,7 @@ class Board
     col_coord = position[1] # y axis
 
     if valid?(position) && empty?(position) # if the position is valid && the position is empty
-      self[row_coord][col_coord] = mark # place the mark at the instance where it is called # PLACE MARK IN INITIALIZED GRID
+      @grid[row_coord][col_coord] = mark # place the mark at the instance where it is called # PLACE MARK IN INITIALIZED GRID
     else
       raise "This position is not valid or exists already"
     end
@@ -38,7 +38,7 @@ class Board
 
   def print
     # print out the board and all of the marks that have been placed on it
-    self.each { |row| puts row.join(" ") } # PRINT OUT THE INSTANCE
+    @grid.each { |row| puts row.join(" ") } # PRINT OUT THE INSTANCE
   end
 
   def win_row?(mark)
@@ -76,6 +76,6 @@ class Board
   end
 
   def empty_positions? # return a boolean indicating whether or not there is at least one empty position on the grid
-    self.grid.flatten.any? { |ele| ele == "_" } # check to see if at least one position is equal to a '_'
+    @grid.flatten.any? { |ele| ele == "_" } # check to see if at least one position is equal to a '_'
   end
 end
