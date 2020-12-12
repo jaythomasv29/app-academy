@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Shopping List</h1>
+  <p id="first">Get it done today</p>
+  <input type="text" name="item" id="item" placeholder="enter item">
+  <ul>
+    <li class="bold red" random="23">Notebook</li>
+    <li>Jello</li>
+    <li>Spinach</li>
+    <li>Rice</li>
+    <li>Candles</li>
+  </ul>
+  <button class="enter">Add</button>
+  <script>
+
+      const input = document.getElementById("item")
+      const ul = document.getElementsByTagName('ul')[0]
+      // const text = input.value
+
+    function inputLength() {
+      return input.value.length;
+    }
+
+    function createListEle () {
+      const li = document.createElement('li')
+      const node = document.createTextNode(input.value)
+      li.appendChild(node)
+      ul.appendChild(li)
+      input.value = ''
+    }
+
+    function addListAfterClick() {
+      if (inputLength() > 0){
+        createListEle()
+      } else {
+        alert('field cannot be empty')
+      } 
+    }
+
+      function addListAfterKeypress(event){
+        if (inputLength() > 0 && event.which === 13){
+          createListEle()
+        } 
+      }
+
+    document.getElementsByTagName("button")[0].addEventListener("click", addListAfterClick)
+    document.getElementsByTagName("input")[0].addEventListener("keypress", addListAfterKeypress)
+  </script>
+</body>
+
+</html>
